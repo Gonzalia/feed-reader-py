@@ -1,6 +1,7 @@
 from datetime import datetime
 from .article import Article
 
+
 class Feed:
     def __init__(self, site_name):
         self.site_name = site_name
@@ -31,24 +32,25 @@ class Feed:
         for article in self.article_list:
             article.pretty_print()
 
+
 if __name__ == "__main__":
     a1 = Article("This Historically Black University Created Its Own Tech Intern Pipeline",
                  "A new program at Bowie State connects computing students directly with companies, bypassing an often harsh Silicon Valley vetting process",
                  datetime.now(),
                  "https://www.nytimes.com/2023/04/05/technology/bowie-hbcu-tech-intern-pipeline.html"
-                )
+                 )
 
     a2 = Article("This Historically Black University Created Its Own Tech Intern Pipeline",
                  "A new program at Bowie State connects computing students directly with companies, bypassing an often harsh Silicon Valley vetting process",
                  datetime.now(),
                  "https://www.nytimes.com/2023/04/05/technology/bowie-hbcu-tech-intern-pipeline.html"
-                )
+                 )
 
     a3 = Article("This Historically Black University Created Its Own Tech Intern Pipeline",
                  "A new program at Bowie State connects computing students directly with companies, bypassing an often harsh Silicon Valley vetting process",
                  datetime.now(),
                  "https://www.nytimes.com/2023/04/05/technology/bowie-hbcu-tech-intern-pipeline.html"
-                )
+                 )
 
     f = Feed("nytimes")
     f.add_article(a1)
