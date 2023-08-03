@@ -9,7 +9,7 @@ class HttpRequester:
         try:
             response = requests.get(url)
         except Exception as e:
-            print(f'An error has occurred: {response.status_code}')
+            print(f'An error has occurred: {response.status_code}\n {e}')
 
         if response.status_code == 200:
             xml_content = response.text
