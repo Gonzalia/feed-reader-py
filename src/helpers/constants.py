@@ -6,3 +6,8 @@ class Constants:
     URL = 'url'
     URLTYPE = 'urlType'
     URLPARAMS = 'urlParams'
+    PARSER = 'parser'
+    TITLE = 'title'
+    DESCRIPTION = 'description'
+    LINK = 'link'
+    PUBDATE = 'pubDate'
