@@ -10,16 +10,14 @@ class RssParser:
     def parse_for_rss(response_xml:str):
 
         f = Feed('Parser')
-
-        tree = ET.parse(response_xml)
-        root = tree.getroot()
+        root = ET.fromstring(response_xml)
 
         for item in root.findall('.//item'):
             f.add_article(Article(
-                title=item.find('title').text,
-                description = item.find('title').text,
-                link=item.find('link').text,
-                publication_date=datetime.strptime(item.find('pubdate').text)
+                title=item.findtext('title'),
+                text = item.findtext('description'),
+                link=item.findtext('link'),
+                publication_date=item.findtext('pubdate')
             ))
 
         return f.get_article_list()

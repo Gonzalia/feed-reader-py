@@ -1,6 +1,6 @@
-from subscription.single_subscription import SingleSubscription
-from helpers.constants import Constants
-from subscription.subscription import Subscription
+from .subscription.single_subscription import SingleSubscription
+from .helpers.constants import Constants
+from .subscription.subscription import Subscription
 import json
 
 
@@ -35,7 +35,6 @@ class SubscriptionParser():
                 single_subscription.get_ulr_params(), 
                 single_subscription.get_url_type())
             )
-
         
 
         return subscription

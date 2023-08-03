@@ -1,4 +1,4 @@
-from subscription.single_subscription import SingleSubscription
+from .single_subscription import SingleSubscription
 
 class Subscription:
     def __init__(self, subscription_file_path):

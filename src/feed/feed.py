@@ -1,5 +1,5 @@
 from datetime import datetime
-from article import Article
+from .article import Article
 
 class Feed:
     def __init__(self, site_name):
