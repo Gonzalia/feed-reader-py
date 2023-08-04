@@ -23,15 +23,15 @@ class SubscriptionParser():
             single_subscription.set_url_type(json_element[Constants.URLTYPE])
 
             for url_param in json_element[Constants.URLPARAMS]:
-                single_subscription.set_ulr_param(url_param)
+                single_subscription.set_url_param(url_param)
 
-        param_len = single_subscription.get_ulr_params_size()
+        param_len = single_subscription.get_url_params_size()
 
         for i in range(param_len):
             subscription.add_single_subscription(
                 SingleSubscription(
                     single_subscription.get_feed_to_request(i),
-                    single_subscription.get_ulr_params(),
+                    single_subscription.get_url_params(),
                     single_subscription.get_url_type())
             )
 
